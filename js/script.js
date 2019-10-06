@@ -1,5 +1,6 @@
 function clearMessages() {
     document.getElementById('messages').innerHTML = '';
+    document.getElementById('result').innerHTML = '';
 }
 
 function getMoveName(argMoveId) {
@@ -15,26 +16,52 @@ function getMoveName(argMoveId) {
     }
 }
 
+
+
 function displayResult(argComputerMove, argPlayerMove) {
     printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
 
     if (argComputerMove == 'kamień' && argPlayerMove == 'papier') {
         printMessage('Ty wygrywasz!');
+        gameResult =1;
     } else if (argComputerMove == 'kamień' && argPlayerMove == 'nożyce') {
         printMessage('Ty przegrywasz!');
+        gameResult =2;
     } else if (argComputerMove == 'papier' && argPlayerMove == 'nożyce') {
         printMessage('Ty wygrywasz!');
+        gameResult =1;
     } else if (argComputerMove == 'papier' && argPlayerMove == 'kamień') {
         printMessage('Ty przegrywasz!');
+        gameResult =2
     } else if (argComputerMove == 'nożyce' && argPlayerMove == 'papier') {
         printMessage('Ty przegrywasz!');
+        gameResult =2;
     } else if (argComputerMove == 'nożyce' && argPlayerMove == 'kamień') {
         printMessage('Ty wygrywasz!');
+        gameResult=1;
     } else if (argComputerMove === argPlayerMove) {
         printMessage('Remis!');
+        gameResult=3;
     } else {
         printMessage("Wpisałeś złą liczbę");
+        gameResult=3;
     }
+}
+
+let playerResult =0;
+let computerResult =0;
+
+function showResult (gameResult) {
+    if (gameResult == 1) {
+        playerResult = playerResult + 1;
+        printResult ('Wyniki: komputer- '+computerResult+' Gracz- '+playerResult);
+    } else if (gameResult == 2) {
+        computerResult = computerResult + 1;
+        printResult('Wyniki: komputer- '+computerResult+' Gracz- '+playerResult);
+    } else {
+        printResult ('Wyniki: komputer- '+computerResult+' Gracz- '+playerResult);
+    }
+
 }
 
 function playGame(playerInput) {
@@ -51,6 +78,8 @@ function playGame(playerInput) {
     let playerMove = getMoveName(playerInput);
 
     displayResult(computerMove, playerMove);
+
+    showResult(gameResult);
 }
 
 
