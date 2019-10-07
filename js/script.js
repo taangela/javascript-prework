@@ -54,12 +54,12 @@ let computerResult =0;
 function showResult (gameResult) {
     if (gameResult == 1) {
         playerResult = playerResult + 1;
-        printResult ('Wyniki: komputer- '+computerResult+' Gracz- '+playerResult);
+        printResult ('Komputer: '+computerResult+' Gracz: '+playerResult);
     } else if (gameResult == 2) {
         computerResult = computerResult + 1;
-        printResult('Wyniki: komputer- '+computerResult+' Gracz- '+playerResult);
+        printResult('Komputer: '+computerResult+' Gracz: '+playerResult);
     } else {
-        printResult ('Wyniki: komputer- '+computerResult+' Gracz- '+playerResult);
+        printResult ('Komputer: '+computerResult+' Gracz: '+playerResult);
     }
 
 }

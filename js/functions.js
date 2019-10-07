@@ -13,4 +13,5 @@ function printResult(msg){
 
 function clearMessages(){
 	document.getElementById('messages').innerHTML = '';
+	
 }

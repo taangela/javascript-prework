@@ -1,4 +1,53 @@
-#messages {
+body {
+  max-width: 500px;
+  margin: 40px auto;
+}
+
+.container {
+  max-width: 350px;
+  text-align: center;
+  margin: auto;
+  padding: 30px;
+  border: solid 8px;
+  border-color: #f7b731;
+  border-radius: 20px;
+  font-size: 18px;
+  background-image: linear-gradient(to bottom right, #fed330, #ffea35);
+}
+
+h1 {
+  margin: 0;
+  color: #4b7bec;
+}
+
+h2 {
+  color: #4b7bec;
+}
+
+.btn {
+  margin: 20px 0;
+  border: 0px;
+  background: transparent;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+#buttons i {
+  font-size: 30px;
+  border: solid 4px;
+  border-radius: 50px;
+  padding: 15px;
   color: red;
+  background-color: white;
+}
+
+#buttons i:hover {
+  color: orange;
+}
+
+#play-paper i {
+  padding: 15px 17px;
 }
 /*# sourceMappingURL=style.css.map */

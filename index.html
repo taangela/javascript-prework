@@ -2,19 +2,28 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Kamień, papier, nożyce</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
 </head>
 <body>
+
 	<div class="container">
+		<h1>Let's play!</h1>
 		<div id="buttons">
-			<button id="play-rock">kamień</button>
-			<button id ="play-paper">papier</button>
-			<button id ="play-scissors">nożyce</button>
+			<button class="btn" id="play-rock"><i class="far fa-hand-rock"></i></button>
+			<button class="btn" id ="play-paper"><i class="far fa-hand-paper"></i></button>
+			<button class="btn" id ="play-scissors"><i class="far fa-hand-scissors"></i></button>
 		</div>
-		<div id="messages"></div>
-		<div id="result"></div>
+		<div id="messages">Do dzieła!<br>wybierz przycisk!</div>
+		<div class="wyniki">
+			<h2>Wyniki:</h2>
+			<div id="result">komputer: 0 gracz: 0</div>
+		</div>
 	</div>
+
+
 	<script src="js/functions.js"></script>
 	<script src="js/script.js"></script>
 </body>
