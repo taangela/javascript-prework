@@ -1,6 +1,7 @@
 body {
   max-width: 500px;
   margin: 40px auto;
+  font-family: 'Lato', sans-serif;
 }
 
 .container {
